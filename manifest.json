@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Shen",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "contextMenus"
+    ],
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "devtools_page": "js/devtools.html",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": [
+            "js/content.js"
+        ]
+      }
+    ]
+  }
+  
